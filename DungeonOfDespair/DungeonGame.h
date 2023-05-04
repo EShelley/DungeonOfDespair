@@ -6,6 +6,7 @@
 */
 class DungeonGame
 {
+public:
 	DungeonGame();
 	~DungeonGame();
 };
