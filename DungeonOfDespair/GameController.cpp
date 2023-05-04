@@ -28,9 +28,9 @@ void GameController::run() {
 		input = m_ui.getInput();
 
 		if (!input.empty())
-			m_ui.display("Command entered: " + input);
+			m_ui.displayLine("Command entered: " + input);
 		else
-			m_ui.display("NEED INPUT!");
+			m_ui.displayLine("NEED INPUT!");
 
 
 	}
