@@ -127,7 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DungeonGame.cpp" />
     <ClCompile Include="DungeonOfDespair.cpp" />
+    <ClCompile Include="GameController.cpp" />
+    <ClCompile Include="GameUI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DungeonGame.h" />
+    <ClInclude Include="GameController.h" />
+    <ClInclude Include="GameUI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
