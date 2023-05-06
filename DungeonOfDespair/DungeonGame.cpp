@@ -4,6 +4,7 @@
 
 */
 #include "DungeonGame.h"
+#include "Entity.h"
 
 
 DungeonGame::DungeonGame() {
