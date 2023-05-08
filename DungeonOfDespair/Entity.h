@@ -8,6 +8,7 @@
 * 
 */
 #include <boost/uuid/uuid.hpp>
+using UUID = boost::uuids::uuid;
 #include <string>
 
 
@@ -20,18 +21,18 @@
 class Entity
 {
 public:
-	Entity(boost::uuids::uuid ent_id)
+	Entity(UUID ent_id)
 		: entity_id(ent_id), className("Entity"), entityName(""), shortDescription(nullptr), detailedDescription(nullptr) {};
-	Entity(boost::uuids::uuid ent_id, std::string classname, std::string name, std::string entityShortDescription, std::string entityDetailedDescription) 
+	Entity(UUID ent_id, std::string classname, std::string name, std::string entityShortDescription, std::string entityDetailedDescription) 
 		: entity_id(ent_id),className(classname), entityName(name), shortDescription(std::move(entityShortDescription)), detailedDescription(std::move(entityDetailedDescription)) {};
 	~Entity();
 
-	const boost::uuids::uuid ID() { return this->entity_id; };
+	UUID ID() const { return this->entity_id; };
 
-	const std::string Name() { return this->entityName; };
-	const std::string ClassName() { return this->className; };
-	const std::string ShortDescription() { return this->shortDescription; };
-	const std::string DetailedDescription() { return this->detailedDescription; };
+	std::string Name() const { return this->entityName; };
+	std::string ClassName() const { return this->className; };
+	std::string ShortDescription() const { return this->shortDescription; };
+	std::string DetailedDescription() const { return this->detailedDescription; };
 
 	void setName(std::string name) { this->entityName = std::move(name); };
 	void setClassName(std::string classname) { this->className = std::move(classname); };
@@ -41,7 +42,7 @@ public:
 	
 
 private:
-	boost::uuids::uuid entity_id;
+	UUID entity_id;
 	std::string entityName;
 	std::string className;
 	std::string shortDescription;

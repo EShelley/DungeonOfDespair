@@ -8,6 +8,7 @@
 *
 */
 #include <boost/uuid/uuid.hpp>
+using UUID = boost::uuids::uuid;
 #include <string>
 #include <vector>
 #include "Entity.h"
@@ -18,8 +19,8 @@
 class Room : public Entity
 {
 public:
-	Room(boost::uuids::uuid room_id) : Entity(room_id, "Room","Room", "An empty room", "This is just an empty room"){};
-	Room(boost::uuids::uuid room_id, std::string roomname, std::string roomShortDescription, std::string roomDetailedDescription) : Entity(room_id, "Room", roomname, roomShortDescription, roomDetailedDescription) {};
+	Room(UUID room_id) : Entity(room_id, "Room","Room", "An empty room", "This is just an empty room"){};
+	Room(UUID room_id, std::string roomname, std::string roomShortDescription, std::string roomDetailedDescription) : Entity(room_id, "Room", roomname, roomShortDescription, roomDetailedDescription) {};
 	~Room() {};
 
 	//TODO: Implement Get/Set Exits - How do I want to model this?

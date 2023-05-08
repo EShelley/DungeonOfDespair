@@ -5,9 +5,10 @@
 
 */
 #include <boost/uuid/uuid.hpp>
-
+using UUID = boost::uuids::uuid;
 #include "Entity.h"
 #include "Room.h"
+#include "Actor.h"
 
 
 class DungeonGame

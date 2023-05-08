@@ -140,6 +140,7 @@
     <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor.h" />
     <ClInclude Include="DungeonGame.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="GameController.h" />
