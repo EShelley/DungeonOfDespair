@@ -6,6 +6,10 @@
 */
 #include <boost/uuid/uuid.hpp>
 
+#include "Entity.h"
+#include "Room.h"
+
+
 class DungeonGame
 {
 public:
