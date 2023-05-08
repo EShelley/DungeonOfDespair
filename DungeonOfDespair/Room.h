@@ -15,7 +15,7 @@
 /**
  * @brief Base Room class, derives from Entity
 */
-class Room : Entity
+class Room : public Entity
 {
 public:
 	Room(boost::uuids::uuid room_id) : Entity(room_id, "Room","Room", "An empty room", "This is just an empty room"){};
