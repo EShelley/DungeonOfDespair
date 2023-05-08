@@ -8,7 +8,7 @@ using UUID = boost::uuids::uuid;
 class Actor : public Entity
 {
 public:
-	Actor(UUID actor_id) : Entity(actor_id, "BaseActor", "BaseActor", "A base Actor", "An inert Base Actor"),currentHP(nullptr),maxHP(nullptr) {};
+	Actor(UUID actor_id) : Entity(actor_id, "BaseActor", "BaseActor", "A base Actor", "An inert Base Actor"),currentHP(0),maxHP(0) {};
 	Actor(UUID ID, std::string Name, std::string ShortDescription, std::string DetailedDescription,int currenthp, int maxhp) : Entity(ID, "BaseActor", Name, ShortDescription, DetailedDescription),currentHP(currenthp), maxHP(maxhp) {};
 	~Actor() {};
 private:
