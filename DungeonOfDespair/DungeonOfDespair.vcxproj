@@ -143,6 +143,7 @@
     <ClInclude Include="Actor.h" />
     <ClInclude Include="DungeonGame.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="Exit.h" />
     <ClInclude Include="GameController.h" />
     <ClInclude Include="GameUI.h" />
     <ClInclude Include="Room.h" />
