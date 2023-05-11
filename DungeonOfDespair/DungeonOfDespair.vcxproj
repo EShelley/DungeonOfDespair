@@ -137,6 +137,7 @@
     <ClCompile Include="DungeonOfDespair.cpp" />
     <ClCompile Include="GameController.cpp" />
     <ClCompile Include="GameUI.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +147,7 @@
     <ClInclude Include="Exit.h" />
     <ClInclude Include="GameController.h" />
     <ClInclude Include="GameUI.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Room.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
