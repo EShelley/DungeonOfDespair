@@ -8,6 +8,7 @@
 * 
 */
 #include <boost/uuid/uuid.hpp>
+#include <boost/uuid/uuid_generators.hpp>
 using UUID = boost::uuids::uuid;
 #include <string>
 
@@ -21,8 +22,10 @@ using UUID = boost::uuids::uuid;
 class Entity
 {
 public:
-	Entity(UUID ent_id)
-		: entity_id(ent_id), className("Entity"), entityName(""), shortDescription(nullptr), detailedDescription(nullptr) {};
+	Entity()
+		: className("Entity"), entityName(""), shortDescription(nullptr), detailedDescription(nullptr) { this->entity_id = boost::uuids::random_generator()(); };
+	Entity(std::string classname, std::string name, std::string entityShortDescription, std::string entityDetailedDescription)
+		: className(classname), entityName(name), shortDescription(std::move(entityShortDescription)), detailedDescription(std::move(entityDetailedDescription)) { this->entity_id = boost::uuids::random_generator()(); };
 	Entity(UUID ent_id, std::string classname, std::string name, std::string entityShortDescription, std::string entityDetailedDescription) 
 		: entity_id(ent_id),className(classname), entityName(name), shortDescription(std::move(entityShortDescription)), detailedDescription(std::move(entityDetailedDescription)) {};
 	~Entity();
