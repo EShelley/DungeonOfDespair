@@ -17,5 +17,13 @@ class DungeonGame
 public:
 	DungeonGame();
 	~DungeonGame();
+
+	void NewGame();
+	bool LoadGame(std::string gameName);
+	bool SaveGame(std::string gameName);
+
+private:
+	bool gameLoaded = false;
+
 };
 
