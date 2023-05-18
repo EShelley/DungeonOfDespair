@@ -5,7 +5,8 @@
 
 */
 #include <boost/uuid/uuid.hpp>
-using UUID = boost::uuids::uuid;
+#include <boost/uuid/uuid_generators.hpp>
+#include <boost/uuid/uuid_io.hpp>
 #include "Entity.h"
 #include "Room.h"
 #include "Actor.h"

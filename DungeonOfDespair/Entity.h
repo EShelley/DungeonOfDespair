@@ -9,8 +9,9 @@
 */
 #include <boost/uuid/uuid.hpp>
 #include <boost/uuid/uuid_generators.hpp>
-using UUID = boost::uuids::uuid;
+#include <boost/uuid/uuid_io.hpp>
 #include <string>
+#include <vector>
 
 
 /**
@@ -26,11 +27,11 @@ public:
 		: className("Entity"), entityName(""), shortDescription(nullptr), detailedDescription(nullptr) { this->entity_id = boost::uuids::random_generator()(); };
 	Entity(std::string classname, std::string name, std::string entityShortDescription, std::string entityDetailedDescription)
 		: className(classname), entityName(name), shortDescription(std::move(entityShortDescription)), detailedDescription(std::move(entityDetailedDescription)) { this->entity_id = boost::uuids::random_generator()(); };
-	Entity(UUID ent_id, std::string classname, std::string name, std::string entityShortDescription, std::string entityDetailedDescription) 
+	Entity(boost::uuids::uuid ent_id, std::string classname, std::string name, std::string entityShortDescription, std::string entityDetailedDescription)
 		: entity_id(ent_id),className(classname), entityName(name), shortDescription(std::move(entityShortDescription)), detailedDescription(std::move(entityDetailedDescription)) {};
 	~Entity();
 
-	UUID ID() const { return this->entity_id; };
+	boost::uuids::uuid ID() const { return this->entity_id; };
 
 	std::string Name() const { return this->entityName; };
 	std::string ClassName() const { return this->className; };
@@ -45,7 +46,7 @@ public:
 	
 
 private:
-	UUID entity_id;
+	boost::uuids::uuid entity_id;
 	std::string entityName;
 	std::string className;
 	std::string shortDescription;
