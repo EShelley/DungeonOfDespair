@@ -22,6 +22,8 @@ public:
 	bool LoadGame(std::string gameName);
 	bool SaveGame(std::string gameName);
 
+	void Run();
+
 private:
 	bool gameLoaded = false;
 
