@@ -26,9 +26,9 @@ public:
 	Entity()
 		: className("Entity"), entityName(""), shortDescription(nullptr), detailedDescription(nullptr) { this->entity_id = boost::uuids::random_generator()(); };
 	Entity(std::string classname, std::string name, std::string entityShortDescription, std::string entityDetailedDescription)
-		: className(classname), entityName(name), shortDescription(std::move(entityShortDescription)), detailedDescription(std::move(entityDetailedDescription)) { this->entity_id = boost::uuids::random_generator()(); };
+		: className(classname), entityName(name), shortDescription(entityShortDescription), detailedDescription(entityDetailedDescription) { this->entity_id = boost::uuids::random_generator()(); };
 	Entity(boost::uuids::uuid ent_id, std::string classname, std::string name, std::string entityShortDescription, std::string entityDetailedDescription)
-		: entity_id(ent_id),className(classname), entityName(name), shortDescription(std::move(entityShortDescription)), detailedDescription(std::move(entityDetailedDescription)) {};
+		: entity_id(ent_id),className(classname), entityName(name), shortDescription(entityShortDescription), detailedDescription(entityDetailedDescription) {};
 	~Entity();
 
 	boost::uuids::uuid ID() const { return this->entity_id; };
@@ -38,10 +38,10 @@ public:
 	std::string ShortDescription() const { return this->shortDescription; };
 	std::string DetailedDescription() const { return this->detailedDescription; };
 
-	void setName(std::string name) { this->entityName = std::move(name); };
-	void setClassName(std::string classname) { this->className = std::move(classname); };
-	void setShortDescription(std::string shortDesc) { this->shortDescription = std::move(shortDesc); };
-	void setDetailedDescription(std::string detailedDesc) { this->className = std::move(detailedDesc); };
+	void setName(std::string name) { this->entityName = name; };
+	void setClassName(std::string classname) { this->className = classname; };
+	void setShortDescription(std::string shortDesc) { this->shortDescription = shortDesc; };
+	void setDetailedDescription(std::string detailedDesc) { this->className = detailedDesc; };
 
 	
 
