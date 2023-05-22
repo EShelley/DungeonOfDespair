@@ -135,8 +135,7 @@
   <ItemGroup>
     <ClCompile Include="DungeonGame.cpp" />
     <ClCompile Include="DungeonOfDespair.cpp" />
-    <ClCompile Include="GameController.cpp" />
-    <ClCompile Include="GameUI.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Room.cpp" />
   </ItemGroup>
@@ -145,8 +144,7 @@
     <ClInclude Include="DungeonGame.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Exit.h" />
-    <ClInclude Include="GameController.h" />
-    <ClInclude Include="GameUI.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Room.h" />
   </ItemGroup>

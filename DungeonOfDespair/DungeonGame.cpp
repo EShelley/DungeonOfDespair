@@ -14,3 +14,8 @@ DungeonGame::DungeonGame() {
 DungeonGame::~DungeonGame() {
 
 }
+
+void DungeonGame::Run() {
+	// Main game loop
+
+}
