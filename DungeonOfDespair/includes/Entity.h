@@ -43,7 +43,7 @@ public:
 	void setShortDescription(std::string shortDesc) { this->shortDescription = shortDesc; };
 	void setDetailedDescription(std::string detailedDesc) { this->className = detailedDesc; };
 
-	
+	virtual std::string Display()=0;
 
 private:
 	boost::uuids::uuid entity_id;

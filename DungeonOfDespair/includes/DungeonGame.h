@@ -18,11 +18,16 @@ public:
 	DungeonGame();
 	~DungeonGame();
 
+	void Display();  // Prints out the current game view? - But if just using std::cout - this could be don
+
+	std::vector<std::string> const TokenizeInput(std::string input);
+	void ProcessInput(std::vector<std::string>& tokens); //??
+
 	void NewGame();
 	bool LoadGame(std::string gameName);
 	bool SaveGame(std::string gameName);
 
-	void Run();
+	void Run();  // Main Game Loop
 
 private:
 	bool gameLoaded = false;

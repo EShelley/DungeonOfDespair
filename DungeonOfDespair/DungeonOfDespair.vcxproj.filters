@@ -1,75 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Source Files\Entities">
-      <UniqueIdentifier>{f3f93f6f-fc5b-40a2-9b64-4009421482ff}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Entities">
-      <UniqueIdentifier>{8f79ed92-c2be-4c2f-8c55-d0c1b2052a07}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Components">
-      <UniqueIdentifier>{ea159d1e-f7bd-4d21-923b-07c3fca34d84}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Components">
-      <UniqueIdentifier>{38f77981-7b0a-4e60-856c-141a1571e27c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Game">
-      <UniqueIdentifier>{59b08cd4-656b-42ba-a032-b6b1fd1a1537}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Game">
-      <UniqueIdentifier>{58e809e9-203e-489c-9614-ab0df0689f79}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Room.cpp">
-      <Filter>Source Files\Entities</Filter>
+    <ClCompile Include="DungeonOfDespair.cpp" />
+    <ClCompile Include="src\Actor.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>Source Files\Entities</Filter>
+    <ClCompile Include="src\Room.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Inventory.cpp">
-      <Filter>Source Files\Components</Filter>
+    <ClCompile Include="src\Item.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Inventory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameUI.cpp">
+      <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="DungeonGame.cpp">
-      <Filter>Source Files\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="DungeonOfDespair.cpp">
-      <Filter>Source Files\Game</Filter>
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Entity.h">
-      <Filter>Header Files\Entities</Filter>
+    <ClInclude Include="includes\Entity.h">
+      <Filter>includes</Filter>
     </ClInclude>
-    <ClInclude Include="Room.h">
-      <Filter>Header Files\Entities</Filter>
+    <ClInclude Include="includes\Actor.h">
+      <Filter>includes</Filter>
     </ClInclude>
-    <ClInclude Include="Actor.h">
-      <Filter>Header Files\Entities</Filter>
+    <ClInclude Include="includes\DungeonGame.h">
+      <Filter>includes</Filter>
     </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Header Files\Entities</Filter>
+    <ClInclude Include="includes\Exit.h">
+      <Filter>includes</Filter>
     </ClInclude>
-    <ClInclude Include="Inventory.h">
-      <Filter>Header Files\Components</Filter>
+    <ClInclude Include="includes\GameController.h">
+      <Filter>includes</Filter>
     </ClInclude>
-    <ClInclude Include="Exit.h">
-      <Filter>Header Files\Components</Filter>
+    <ClInclude Include="includes\GameUI.h">
+      <Filter>includes</Filter>
     </ClInclude>
-    <ClInclude Include="DungeonGame.h">
-      <Filter>Header Files\Game</Filter>
+    <ClInclude Include="includes\Inventory.h">
+      <Filter>includes</Filter>
     </ClInclude>
+    <ClInclude Include="includes\Item.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Room.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="includes">
+      <UniqueIdentifier>{45dacb60-300f-4950-881d-b0b48bbe19d9}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{5eda7c3e-22f6-488e-93f4-a4b7d243c25f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
